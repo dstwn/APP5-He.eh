@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Panti Q</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="dataKab">
+        <item>Kota Yogya</item>
+        <item>Sleman</item>
+        <item>Bantul</item>
+        <item>Gunung Kidul</item>
+        <item>Kulon Progo</item>
+    </string-array>
+    <string-array name="imageKab">
+        <item>@drawable/ic_logo_white</item>
+        <item>@drawable/ic_logo_white</item>
+        <item>@drawable/ic_logo_white</item>
+        <item>@drawable/ic_logo_white</item>
+        <item>@drawable/ic_logo_white</item>
+    </string-array>
+</resources>
