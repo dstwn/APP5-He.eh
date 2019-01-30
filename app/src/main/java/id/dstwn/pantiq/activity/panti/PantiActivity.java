@@ -1,10 +1,12 @@
 package id.dstwn.pantiq.activity.panti;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import id.dstwn.pantiq.R;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
@@ -18,16 +20,23 @@ public class PantiActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_panti);
+        setToolbar();
 
-        setTitle();
+        CardView cardView = (CardView) findViewById(id.card_panti);
 
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), DetailActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
-    private void setTitle() {
+    private void setToolbar() {
         androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar)findViewById(id.tulbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Intent i = getIntent();
-        getSupportActionBar().setTitle(i.getStringExtra("judul"));
     }
 }

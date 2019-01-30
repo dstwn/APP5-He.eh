@@ -4,30 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".activity.panti.PantiActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:background="@color/colorWhite"
         app:elevation="0dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="?attr/actionBarSize">
             <androidx.appcompat.widget.Toolbar
                 app:layout_collapseMode="pin"
                 android:background="@color/colorWhite"
                 android:id="@+id/tulbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp"
+                    />
             </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <include layout="@layout/item_panti" />
+        <!--<androidx.recyclerview.widget.RecyclerView-->
+            <!--android:id="@+id/list_panti"-->
+            <!--android:layout_gravity="bottom"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_gravity="bottom"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </androidx.recyclerview.widget.RecyclerView>
+        <!--</androidx.recyclerview.widget.RecyclerView>-->
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
