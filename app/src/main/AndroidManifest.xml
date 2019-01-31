@@ -43,6 +43,15 @@
         <activity
             android:name=".activity.panti.DetailActivity"
             android:parentActivityName=".activity.panti.PantiActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.dashboard.profile.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".activity.dashboard.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.dashboard.bookmark.BookmarkActivity"
+            android:label="@string/title_activity_bookmark"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

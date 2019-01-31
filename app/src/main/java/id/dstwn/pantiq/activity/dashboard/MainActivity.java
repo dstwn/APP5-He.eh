@@ -24,6 +24,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import id.dstwn.pantiq.R;
 import id.dstwn.pantiq.activity.auth.login.LoginActivity;
+import id.dstwn.pantiq.activity.dashboard.bookmark.BookmarkActivity;
+import id.dstwn.pantiq.activity.dashboard.profile.ProfileActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -181,9 +183,12 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            // Handle the camera action
-        } else if (id == R.id.nav_bookmark) {
+           Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+           startActivity(i);
 
+        } else if (id == R.id.nav_bookmark) {
+            Intent i = new Intent(getApplicationContext(),BookmarkActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_help) {
 
         } else if (id == R.id.nav_share) {
