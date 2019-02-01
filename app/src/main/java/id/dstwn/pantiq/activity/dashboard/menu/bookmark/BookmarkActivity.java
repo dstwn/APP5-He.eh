@@ -1,4 +1,4 @@
-package id.dstwn.pantiq.activity.dashboard.profile;
+package id.dstwn.pantiq.activity.dashboard.menu.bookmark;
 
 import android.os.Bundle;
 
@@ -12,16 +12,14 @@ import android.view.View;
 
 import id.dstwn.pantiq.R;
 
-public class ProfileActivity extends AppCompatActivity {
+public class BookmarkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_bookmark);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(null);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -32,4 +30,5 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
     }
+
 }

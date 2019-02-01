@@ -1,4 +1,4 @@
-package id.dstwn.pantiq.activity.dashboard.bookmark;
+package id.dstwn.pantiq.activity.dashboard.menu.help;
 
 import android.os.Bundle;
 
@@ -12,12 +12,12 @@ import android.view.View;
 
 import id.dstwn.pantiq.R;
 
-public class BookmarkActivity extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bookmark);
+        setContentView(R.layout.activity_help);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

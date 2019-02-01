@@ -4,17 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+
+import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.navigation.NavigationView;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.graphics.drawable.DrawerArrowDrawable;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,15 +21,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import id.dstwn.pantiq.R;
 import id.dstwn.pantiq.activity.auth.login.LoginActivity;
-import id.dstwn.pantiq.activity.dashboard.bookmark.BookmarkActivity;
-import id.dstwn.pantiq.activity.dashboard.profile.ProfileActivity;
+import id.dstwn.pantiq.activity.berita.BeritaActivity;
+import id.dstwn.pantiq.activity.dashboard.menu.bookmark.BookmarkActivity;
+import id.dstwn.pantiq.activity.dashboard.menu.help.HelpActivity;
+import id.dstwn.pantiq.activity.dashboard.menu.profile.ProfileActivity;
 
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -74,6 +70,16 @@ public class MainActivity extends AppCompatActivity
         
         getDataUser();
 
+
+        MaterialCardView materialCardView = (MaterialCardView) findViewById(R.id.beritaku);
+        materialCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), BeritaActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     void getDataUser() {
@@ -87,6 +93,7 @@ public class MainActivity extends AppCompatActivity
         btn_logout = (Menu) hv.findViewById(R.id.nav_logout);
 
         sharedPreferences = getSharedPreferences(LoginActivity.sharedPref, Context.MODE_PRIVATE);
+
 
         username = getIntent().getStringExtra(TAG_USERNAME);
         nameuser = getIntent().getStringExtra(TAG_NAMEUSER);
@@ -184,13 +191,16 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_profile) {
            Intent i = new Intent(getApplicationContext(),ProfileActivity.class);
+            i.putExtra(TAG_ID, id);
+            i.putExtra(TAG_USERNAME, username);
+            i.putExtra(TAG_NAMEUSER, nameuser);
            startActivity(i);
-
         } else if (id == R.id.nav_bookmark) {
             Intent i = new Intent(getApplicationContext(),BookmarkActivity.class);
             startActivity(i);
         } else if (id == R.id.nav_help) {
-
+            Intent i = new Intent(getApplicationContext(),HelpActivity.class);
+            startActivity(i);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_feedback) {

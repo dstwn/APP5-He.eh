@@ -112,4 +112,7 @@
     </string>
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_bookmark">BookmarkActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_berita">BeritaActivity</string>
+    <string name="title_activity_detail_berita">DetailBerita</string>
 </resources>

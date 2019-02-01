@@ -45,13 +45,27 @@
             android:parentActivityName=".activity.panti.PantiActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.dashboard.profile.ProfileActivity"
+            android:name=".activity.dashboard.menu.profile.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:parentActivityName=".activity.dashboard.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".activity.dashboard.bookmark.BookmarkActivity"
+            android:name=".activity.dashboard.menu.bookmark.BookmarkActivity"
             android:label="@string/title_activity_bookmark"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.dashboard.menu.help.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.berita.BeritaActivity"
+            android:label="@string/title_activity_berita"
+            android:parentActivityName=".activity.dashboard.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.berita.DetailBerita"
+            android:label="@string/title_activity_detail_berita"
+            android:parentActivityName=".activity.berita.BeritaActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

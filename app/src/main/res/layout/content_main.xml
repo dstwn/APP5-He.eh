@@ -39,11 +39,11 @@
                 android:textSize="14dp"/>
         </LinearLayout>
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/materialCardView"
+            android:id="@+id/beritaku"
             android:layout_marginRight="18dp"
             android:layout_width="match_parent"
             android:layout_height="220dp"
-            app:cardCornerRadius="7dp"
+            app:cardCornerRadius="5dp"
             app:cardBackgroundColor="@color/colorAccent"
             app:cardElevation="0.5dp"
             app:cardUseCompatPadding="true">

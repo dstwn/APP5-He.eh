@@ -16,7 +16,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/gambar_detail_berita"
                 android:layout_width="match_parent"
                 android:layout_height="196dp"
                 android:layout_alignParentTop="true"
@@ -45,51 +45,31 @@
                     app:layout_scrollFlags="scroll|enterAlways|snap"
                     app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
                     >
-                    <ImageView
-                        android:padding="15dp"
-                        android:layout_width="?attr/actionBarSize"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/pin"
-                        android:layout_gravity="right"
-                        />
+
                 </androidx.appcompat.widget.Toolbar>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="72dp"
                     android:layout_marginRight="16dp"
-                    android:text="Judul panti panti panti"
+                    android:maxLines="2"
+                    android:id="@+id/judul_detail_berita"
+                    android:text="Judul berita"
                     android:textColor="@color/colorBlack"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="72dp"
-                    android:layout_marginRight="16dp"
-                    android:text="Alamat panti"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="14sp" />
+
 
             </com.google.android.material.appbar.AppBarLayout>
 
 
             <include
-                layout="@layout/content_detail"
+                layout="@layout/content_detail_berita"
                 />
         </LinearLayout>
 
     </ScrollView>
-    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
-        <!--android:id="@+id/fab"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:layout_anchor="@+id/toolbar"-->
-        <!--android:layout_margin="@dimen/fab_margin"-->
-        <!--app:layout_anchorGravity="bottom|end"-->
-        <!--app:layout_collapseMode="parallax"-->
-        <!--app:srcCompat="@drawable/pin" />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
